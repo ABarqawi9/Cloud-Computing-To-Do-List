@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud To-Do</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <h1>Cloud To-Do List</h1>
+    </header>
+
+    <section id="auth-section" class="card">
+      <h2>Login / Register</h2>
+      <form id="authForm">
+        <input id="email" type="email" placeholder="Email" required />
+        <input id="password" type="password" placeholder="Password" minlength="6" required />
+        <div class="row">
+          <button id="registerBtn" type="button" onclick="register()">Register</button>
+          <button id="loginBtn" type="button" onclick="login()">Login</button>
+        </div>
+        <p id="authMsg" class="msg"></p>
+      </form>
+    </section>
+
+    <section id="todo-section" class="card" style="display: none;">
+      <div class="row">
+        <h2>Your Tasks</h2>
+        <button id="logoutBtn" class="secondary" type="button" onclick="logout()">Logout</button>
+      </div>
+
+      <div class="row">
+        <input id="taskInput" type="text" placeholder="Add a new task..." />
+        <button id="addTaskBtn" type="button" onclick="addTask()">Add</button>
+      </div>
+
+      <ul id="taskList"></ul>
+      <p id="appMsg" class="msg"></p>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>

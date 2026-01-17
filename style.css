@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px; /* Limits width so it doesn't stretch too far */
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Fixes the "too close" issue for inputs and buttons */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0; /* Adds vertical space between inputs */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+.row {
+    display: flex;
+    gap: 10px; /* Adds horizontal space between buttons */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 1; /* Makes buttons equal width in a row */
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#addTaskBtn, #loginBtn, #registerBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+#logoutBtn {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 20px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Style for the Task List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #fff;
+    border-left: 4px solid #007bff;
+    padding: 15px;
+    margin-bottom: 12px; /* Space between each task card */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+li button {
+    flex: none;
+    width: auto;
+    background-color: #007bff;
+    padding: 8px 15px;
+}
